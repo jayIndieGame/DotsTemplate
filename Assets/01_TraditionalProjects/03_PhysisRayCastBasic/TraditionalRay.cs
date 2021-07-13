@@ -20,6 +20,7 @@ public class TraditionalRay : MonoBehaviour
 
     void Start()
     {
+
         Sphere = GameObject.Find("Sphere");
         sphereRay = new Ray
         {
