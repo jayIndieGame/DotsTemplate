@@ -1,0 +1,26 @@
+{
+  "name": "com.unity.coding",
+  "displayName": "Unity Coding Tools",
+  "version": "0.1.0-preview.17",
+  "unity": "2019.3",
+  "description": "Tooling and configurations to ensure code is automatically formatted, encoded, and linted according to standard Unity development conventions and best practices.",
+  "keywords": [
+    "unity",
+    "format",
+    "csharp",
+    "uncrustify",
+    "api scraping"
+  ],
+  "dependencies": {
+    "nuget.moq": "1.0.0"
+  },
+  "relatedPackages": {
+    "com.unity.coding.tests": "0.1.0-preview.17"
+  },
+  "repository": {
+    "footprint": "58bf985a3af4dbee3f692e12f3b810de6f1f6513",
+    "type": "git",
+    "url": "https://github.com/Unity-Technologies/com.unity.coding.git",
+    "revision": "78873c1166a6516181ec0ce7371768cb85a4c996"
+  }
+}

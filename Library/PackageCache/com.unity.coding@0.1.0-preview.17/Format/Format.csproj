@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(SolutionDir)\common.targets" />
+
+  <ItemGroup>
+    <!--
+      Tilde character in the path needs to be escaped due to a bug in Rider
+      https://youtrack.jetbrains.com/issue/RIDER-34524  
+    -->
+    <Compile Remove="Uncrustify&#x126;\**" />
+    <EmbeddedResource Remove="Uncrustify&#x126;\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="editorconfig" Version="0.12.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Utils\Utils.csproj" />
+  </ItemGroup>
+
+</Project>

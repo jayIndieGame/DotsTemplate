@@ -1,0 +1,21 @@
+// This file is generated. Do not modify by hand.
+// XML documentation file not found. To check if public methods have XML comments,
+// make sure the XML doc file is present and located next to the scraped dll
+namespace Unity.Coding.Editor.ApiScraping
+{
+    public static class ApiScraping
+    {
+        public static void Scrape();
+        public static bool ValidateAllFilesScraped(System.Collections.Generic.List<string> failedFileList);
+    }
+}
+
+namespace Unity.Coding.Editor.Formatting
+{
+    public static class Formatting
+    {
+        public static System.Collections.Generic.ICollection<string> Format();
+        public static System.Collections.Generic.ICollection<string> Format(string path);
+        public static bool ValidateAllFilesFormatted(string path, System.Collections.Generic.List<string> failedFileList = default(System.Collections.Generic.List<string>));
+    }
+}
