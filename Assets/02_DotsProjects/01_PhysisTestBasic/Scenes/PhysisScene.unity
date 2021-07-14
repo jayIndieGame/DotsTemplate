@@ -285,7 +285,7 @@ MonoBehaviour:
   m_ForceUnique: 0
   m_Material:
     m_SupportsTemplate: 1
-    m_Template: {fileID: 0}
+    m_Template: {fileID: 11400000, guid: 120db8a63d036c8498859c905dd75155, type: 2}
     m_CollisionResponse:
       m_Override: 0
       m_Value: 3
@@ -414,7 +414,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4d1f4d46e1466ab49ab7d0a578e6dc16, type: 2}
+  - {fileID: 2100000, guid: e778ce523720af14396c77d235c3e958, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -618,7 +618,7 @@ MonoBehaviour:
   m_ForceUnique: 0
   m_Material:
     m_SupportsTemplate: 1
-    m_Template: {fileID: 11400000, guid: d0ccf6d1576e4a544958e87b585e6b38, type: 2}
+    m_Template: {fileID: 11400000, guid: 120db8a63d036c8498859c905dd75155, type: 2}
     m_CollisionResponse:
       m_Override: 0
       m_Value: 0
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_ForceUnique: 0
   m_Material:
     m_SupportsTemplate: 1
-    m_Template: {fileID: 11400000, guid: d0ccf6d1576e4a544958e87b585e6b38, type: 2}
+    m_Template: {fileID: 11400000, guid: 120db8a63d036c8498859c905dd75155, type: 2}
     m_CollisionResponse:
       m_Override: 0
       m_Value: 0
