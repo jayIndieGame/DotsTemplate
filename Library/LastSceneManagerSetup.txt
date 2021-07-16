@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/01_TraditionalProjects/03_PhysisRayCastBasic/RayCastBasic.unity
+- path: Assets/01_TraditionalProjects/02_MousePickTradition/MousePickTraditionScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
