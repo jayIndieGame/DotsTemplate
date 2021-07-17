@@ -60,12 +60,14 @@
     <Compile Include="Assets\02_DotsProjects\01_PhysisTestBasic\Scripts\Systems\TestTriggersSystem.cs" />
     <Compile Include="Assets\01_TraditionalProjects\03_PhysisRayCastBasic\Scripts\TraditionalRay.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\System\LerpSystem.cs" />
+    <Compile Include="Assets\01_TraditionalProjects\02_MousePickTradition\Scripts\MousePickTradition.cs" />
     <Compile Include="Assets\02_DotsProjects\02_PhysisMousePick\Scripts\Component\MousePick.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Mono\GameStart.cs" />
-    <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Component\TestBuffer.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Component\LerpComponent.cs" />
     <Compile Include="Assets\01_TraditionalProjects\00_TraditionalBasicPerformanceTest\Scripts\Move.cs" />
-    <Compile Include="Assets\01_TraditionalProjects\02_MousePickTradition\Scripts\MousePickTradition.cs" />
+    <Compile Include="Assets\02_DotsProjects\03_PhysisRayCastDots\Scripts\Component\CharacterComponent.cs" />
+    <Compile Include="Assets\02_DotsProjects\03_PhysisRayCastDots\Scripts\Mono\CharacterMove.cs" />
+    <Compile Include="Assets\02_DotsProjects\03_PhysisRayCastDots\Scripts\System\CharacterMoveSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
