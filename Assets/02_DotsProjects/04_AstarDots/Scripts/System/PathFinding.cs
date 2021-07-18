@@ -13,6 +13,7 @@ using UnityEngine.PlayerLoop;
 
 
 //TODO 把ComponentSystem改成SytemBase
+//TODO 区分场景
 public class PathFinding : ComponentSystem
 {
 
@@ -22,6 +23,9 @@ public class PathFinding : ComponentSystem
 
     protected override void OnUpdate()
     {
+        if(GameObject.FindObjectOfType<PathFindingGrid>() == null) return;
+        ;
+
         int gridWidth = PathFindingGrid.Instance.pathFindingGrid.GetWidth();
         int gridHeight = PathFindingGrid.Instance.pathFindingGrid.GetHeight();
 

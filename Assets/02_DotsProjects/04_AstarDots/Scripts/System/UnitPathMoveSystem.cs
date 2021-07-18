@@ -12,6 +12,8 @@ public class UnitPathMoveSystem : ComponentSystem
 
     protected override void OnUpdate()
     {
+        if(GameObject.FindObjectOfType<PathFindingGrid>() == null)return;
+        ;
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

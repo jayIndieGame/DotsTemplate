@@ -5,6 +5,7 @@ using Unity.Jobs;
 using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PathFollowSystem : JobComponentSystem
 {
@@ -17,6 +18,10 @@ public class PathFollowSystem : JobComponentSystem
 
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
+        //TODO 为了区分场景用了很笨的方法。
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "AstarScene") return default(JobHandle);
+
         float deltaTime = Time.DeltaTime;
 
         return Entities.ForEach((Entity entity, DynamicBuffer<PathPositions> pathPositionBuffer, ref Translation translation, ref PathFollow pathFollow) => {
@@ -65,6 +70,10 @@ public class PathFollowGetNewPathSystem : JobComponentSystem
 
     protected override JobHandle OnUpdate(JobHandle inputDeps)
     {
+        //TODO 为了区分场景用了很笨的方法。
+        Scene scene = SceneManager.GetActiveScene();
+        if (scene.name != "AstarScene") return default(JobHandle);
+
         int mapWidth = PathFindingGrid.Instance.pathFindingGrid.GetWidth();
         int mapHeight = PathFindingGrid.Instance.pathFindingGrid.GetHeight();
         float3 originPosition = float3.zero;

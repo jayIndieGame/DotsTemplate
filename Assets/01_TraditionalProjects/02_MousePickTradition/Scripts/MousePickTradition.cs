@@ -48,11 +48,16 @@ public class MousePickTradition : MonoBehaviour
         {
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out raycastHitInfo, 100f) && !raycastHitInfo.rigidbody.isKinematic)
+
+            if (Physics.Raycast(ray, out raycastHitInfo, 100f))
             {
-                hitGameObject = raycastHitInfo.transform.gameObject;
-                worldHitPoint = raycastHitInfo.point;
-                localHitPoint = raycastHitInfo.transform.InverseTransformPoint(worldHitPoint);
+                if(raycastHitInfo.rigidbody == null) return;
+                if (!raycastHitInfo.rigidbody.isKinematic)
+                {
+                    hitGameObject = raycastHitInfo.transform.gameObject;
+                    worldHitPoint = raycastHitInfo.point;
+                    localHitPoint = raycastHitInfo.transform.InverseTransformPoint(worldHitPoint);
+                }
             }
             springJointObj.SetActive(true);
 
