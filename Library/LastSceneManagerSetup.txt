@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/01_TraditionalProjects/02_MousePickTradition/MousePickTraditionScene.unity
+- path: Assets/02_DotsProjects/04_AstarDots/Scene/AstarScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -65,10 +65,10 @@ public class CharacterMoveSystem : SystemBase
         {
             MousePickCollector mousePickCollector = new MousePickCollector(1.0f, CollisionWorld.Bodies, NumDynamicBodies);
             mousePickCollector.IgnoreTriggers = true;
-
             CollisionWorld.CastRay(RayInput, ref mousePickCollector);
             if (mousePickCollector.MaxFraction < 1f)
             {
+
                 float3 MovePoint = mousePickCollector.Hit.Position;
 
                 var transArray = batchInChunk.GetNativeArray(transHandle);
@@ -79,25 +79,13 @@ public class CharacterMoveSystem : SystemBase
                     var translation = transArray[i];
                     var character = characterArray[i];
 
-                    rayUnderFoot = new RaycastInput
-                    {
-                        Start = translation.Value,
-                        End = new float3(0, -100f, 0),
-                        Filter = new CollisionFilter
-                        {
-                            BelongsTo = ~0u,
-                            CollidesWith = ~0u,
-                            GroupIndex = 0,//TODO
-                        }
-                    };
-                    CollisionWorld.CastRay(rayUnderFoot, out raycastHit);
 
-
-                    //TODO
+                    //TODO 完善character的移动
 
                 }
 
             }
+            
         }
 
     }
@@ -129,7 +117,7 @@ public class CharacterMoveSystem : SystemBase
                 {
                     Start = unityRay.origin,
                     End = unityRay.origin + unityRay.direction * k_MaxDistance,
-                    Filter = CollisionFilter.Default,//TODO
+                    Filter = CollisionFilter.Default,//TODO 我还不会处理CollisionFilter 之后看看文档怎么处理再写这部分的代码
                 },
 
             }.Schedule(query, handle);
