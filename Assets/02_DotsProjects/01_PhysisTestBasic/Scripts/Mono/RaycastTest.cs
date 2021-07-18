@@ -24,6 +24,7 @@ public class RaycastTest : MonoBehaviour
     {
         BuildPhysicsWorld buildPhysicsWorld =
             World.DefaultGameObjectInjectionWorld.GetExistingSystem<BuildPhysicsWorld>();
+
         CollisionWorld collisionWorld = buildPhysicsWorld.PhysicsWorld.CollisionWorld;
 
         RaycastInput raycastInput = new RaycastInput()

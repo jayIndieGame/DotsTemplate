@@ -22,13 +22,12 @@ public class LerpSystem :SystemBase
     {
         var translationHandle = GetComponentTypeHandle<Translation>();
         var lerpHandle = GetComponentTypeHandle<LerpComponent>(true);
-        var BufferHandle = GetBufferTypeHandle<TestBuffer>();
 
         JobToLerp job = new JobToLerp
         {
             transHandle = translationHandle,
             lerpHandle = lerpHandle,
-            BufferTypeHandle = BufferHandle
+
         };
 
         Dependency = job.ScheduleParallel(query,1,Dependency);
@@ -42,17 +41,11 @@ public class LerpSystem :SystemBase
 
         [ReadOnly] public ComponentTypeHandle<LerpComponent> lerpHandle;
 
-        public BufferTypeHandle<TestBuffer> BufferTypeHandle;
-
         public void Execute(ArchetypeChunk batchInChunk, int batchIndex)
         {
             var transArray = batchInChunk.GetNativeArray(transHandle);
             var lerpArray = batchInChunk.GetNativeArray(lerpHandle);
-            var bufferArray = batchInChunk.GetBufferAccessor(BufferTypeHandle);
-            for (int i = 0; i < bufferArray.Length; i++)
-            {
-                int j = bufferArray[i].Capacity;
-            }
+
 
             for (int i = 0; i < batchInChunk.Count; i++)
             {

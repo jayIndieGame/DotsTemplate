@@ -27,7 +27,9 @@
     <p>00_EcsAndPhyDoc</p>
     <p>01_TraditionalProjects</p>
     <p>02_DotsProjects</p>
+    <p>99_UtilClass</p>
 </details>
+
 
 - #### **00_EcsAndPhyDoc**
 
@@ -50,6 +52,20 @@
   - 这两个文件夹内的内容基本是一一对应的。TraditionalProjects代表着面对对象，基本靠Mono实现的一些功能。DotsProjects代表着面对数据，基本靠Ecs+Job System+Brust实现的功能。
   - 02_DotsProjects不会对每一个Api都做一个案例。而是围绕着一个功能取实现。其中牵扯的一些Api会标注出来。
   - 两者的00项目是对Dots和传统面对对象编程的性能做了个初步的比对。后续的项目则是在实现某些具体的功能。
+  
+- #### 99_UtilClass工具类
+
+
+  - 写代码时会把一些公有的方法提取出来放在这个文件夹下面。
+
+
+
+## 急待解决的问题
+
+- <font color=Brown>DOTS ECS中只要继承了SystemBase无论你在哪个场景下都会执行这个System。有没有一个办法能按照场景执行对应的System。</font>
+
+- <font color= Gold>Physics中Layer BelongsTo、Collide With在代码中是如何实现区分的。</font>
+- <font color= DarkGreen>DOTS如何Debug。出了Assertion。怎么打断断点？</font>
 
 ## 项目目标
 
