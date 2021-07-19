@@ -65,7 +65,7 @@
 - <font color=Brown>DOTS ECS中只要继承了SystemBase无论你在哪个场景下都会执行这个System。有没有一个办法能按照场景执行对应的System。</font>
 
 - <font color= Gold>Physics中Layer BelongsTo、Collide With在代码中是如何实现区分的。</font>
-- <font color= DarkGreen>DOTS如何Debug。出了Assertion。怎么打断断点？</font>
+- <font color= DarkGreen>DOTS如何Debug。除了Assertion。怎么打断断点？</font>
 
 ## 项目目标
 
