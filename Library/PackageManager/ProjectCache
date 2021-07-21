@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637621752010688451
+      ticks: 637623426216180119
     m_Hash: 4134110757
   m_LockFileStatus:
     m_FilePath: E:/unity/DotsTemplate/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637621752010742330
+      ticks: 637623426225432058
     m_Hash: 1528649997
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

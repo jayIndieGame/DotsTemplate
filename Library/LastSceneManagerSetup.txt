@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/01_TraditionalProjects/03_PhysisRayCastBasic/RayCastBasic.unity
+- path: Assets/02_DotsProjects/05_SubScene/Scene/SubScene_MainScene.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
