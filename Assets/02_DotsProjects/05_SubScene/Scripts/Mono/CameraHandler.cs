@@ -3,7 +3,7 @@ using Unity.Mathematics;
 using Unity.Transforms;
 using UnityEngine;
 
-namespace Dots.SubScene
+namespace DOTS.SubScene
 {
     public class CameraHandler : MonoBehaviour
     {

@@ -9,24 +9,28 @@ using UnityEngine;
 using UnityEngine.Assertions;
 using Hash128 = Unity.Entities.Hash128;
 
-public class SubSceneReference : MonoBehaviour
+namespace DOTS.SubScene
 {
-    private static SubSceneReference instance;
-
-    public static SubSceneReference Instance
+    public class SubSceneReference : MonoBehaviour
     {
-        get
+        private static SubSceneReference instance;
+
+        public static SubSceneReference Instance
         {
-            Assert.IsTrue(FindObjectsOfType<SubSceneReference>().Length == 1);
-            return instance;
+            get
+            {
+                Assert.IsTrue(FindObjectsOfType<SubSceneReference>().Length == 1);
+                return instance;
+            }
+            private set { }
         }
-        private set { }
+
+        public Unity.Scenes.SubScene[] SubSceneArray;
+
+        public void Awake()
+        {
+            instance = this;
+        }
     }
 
-    public SubScene[] SubSceneArray;
-
-    public void Awake()
-    {
-        instance = this;
-    }
 }

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/02_DotsProjects/05_SubScene/Scene/SubScene_MainScene.unity
+- path: Assets/02_DotsProjects/06_DynamicBuffer/Scene/TestBuffer.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

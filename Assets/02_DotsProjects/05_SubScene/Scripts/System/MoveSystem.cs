@@ -4,7 +4,7 @@ using Unity.Transforms;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Dots.SubScene
+namespace DOTS.SubScene
 {
     [UpdateInGroup(typeof(SimulationSystemGroup))]
     public class PlayerMovementSystem : ComponentSystem

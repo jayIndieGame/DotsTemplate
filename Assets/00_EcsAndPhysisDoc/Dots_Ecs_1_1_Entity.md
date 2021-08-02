@@ -9,7 +9,7 @@
 ### Creating entities
 
 1. 在场景中添加GameObject，并添加脚本Convert to Entity
-2. 对于冬天添加的Entities，可以在systems中创建一个创建entities的job。
+2. 要复制一个已有的Entities，包括他里面的数据。可以使用Instantiate。
 3. 也可以直接使用**EntityMananger.CreateEntity**这个方法。这个方法效率是最高的。
 
 #### Creating entities with an EntityManager
@@ -118,11 +118,14 @@ entityManager.AddComponent<Translation>(emptyEntity);
         [BurstCompile]
         struct RotationSpeedJob : IJobEntityBatch
         {
+            //需要的变量先列一下,通过外面new job对象的时候赋值
             public float DeltaTime;
             public ComponentTypeHandle<Rotation> RotationTypeHandle;
             [ReadOnly] public ComponentTypeHandle<RotationSpeed_IJobEntityBatch> RotationSpeedTypeHandle;
+            //要干的事情
             public void Execute(ArchetypeChunk batchInChunk, int batchIndex)
             {
+                //同一类的Entities在同一个Chunk里面。
                 var chunkRotations = batchInChunk.GetNativeArray(RotationTypeHandle);
                 var chunkRotationSpeeds = batchInChunk.GetNativeArray(RotationSpeedTypeHandle);
                 for (var i = 0; i < batchInChunk.Count; i++)
@@ -140,14 +143,14 @@ entityManager.AddComponent<Translation>(emptyEntity);
             }
         }
         ```
-
+     
         注：
 
         - **[BurstCompile]**可以加速这部分的代码速度。该方法内不准使用引用变量。
         - [ComponentTypeHandle](https://docs.unity3d.com/Packages/com.unity.entities@0.17/api/Unity.Entities.ComponentTypeHandle-1.html) -- 允许我在 Execute 函数访问存储在当前块中的实体组件和缓冲区。
-
+     
      5. 在系统 OnUpdate 函数中[调度作业](https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/ecs_ijobentitybatch.html#schedule-the-job)，将标识要处理的实体的实体查询传递给调度函数（ScheduleParallel、Schedule）。
-
+     
         ```csharp
         //方法1
         var rotationType = GetComponentTypeHandle<Rotation>();

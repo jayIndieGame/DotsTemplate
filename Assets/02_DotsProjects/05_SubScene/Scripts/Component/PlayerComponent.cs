@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Unity.Entities;
 using UnityEngine;
 
-namespace Dots.SubScene
+namespace DOTS.SubScene
 {
     [GenerateAuthoringComponent]
     public struct PlayerComponent : IComponentData

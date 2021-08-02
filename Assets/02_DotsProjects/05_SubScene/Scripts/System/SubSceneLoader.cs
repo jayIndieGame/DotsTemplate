@@ -7,7 +7,7 @@ using Unity.Transforms;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Dots.SubScene
+namespace DOTS.SubScene
 {
     public class SubSceneLoader : ComponentSystem
     {
@@ -24,7 +24,7 @@ namespace Dots.SubScene
             {
                 foreach (var subScene in SubSceneReference.Instance.SubSceneArray)
                 {
-                    if (math.distance(subScene.transform.position, translation.Value) <
+                    if (math.distance((float3) subScene.transform.position, translation.Value) <
                         playerComponent.LoadSceneDistance)
                         
                     {
