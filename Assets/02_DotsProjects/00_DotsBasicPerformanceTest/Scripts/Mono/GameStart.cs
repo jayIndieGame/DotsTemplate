@@ -8,6 +8,7 @@ using Unity.Physics;
 using Unity.Rendering;
 using Unity.Transforms;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Material = UnityEngine.Material;
 using Random = UnityEngine.Random;
 
@@ -20,11 +21,17 @@ public class GameStart : MonoBehaviour
     private Translation EndTranslation;
     public int CountToGen = 100;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
 
+    private void Start()
+    {
+
+    }
+
+    public void ButtonClickFunction()
+    {
+
+        EntityManager entityManager = World.DefaultGameObjectInjectionWorld.EntityManager;
+        entityManager.DestroyAndResetAllEntities();
 
         EntityArchetype entityArchetype = entityManager.CreateArchetype(
             typeof(RenderMesh),
@@ -51,5 +58,4 @@ public class GameStart : MonoBehaviour
             entityManager.SetSharedComponentData(entity, new RenderMesh { mesh = _mesh, material = _material });
         }
     }
-
 }

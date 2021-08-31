@@ -63,9 +63,10 @@
 ## 急待解决的问题
 
 - <font color=Brown>DOTS ECS中只要继承了SystemBase无论你在哪个场景下都会执行这个System。有没有一个办法能按照场景执行对应的System。</font>
-
+  - 其实给每个场景指定一个World就好了。这样所有的自己写的System都再指定的World下运行，就不会产生不必要的问题了。但是新建World也会导致一个Scene跑一个DefaultWorld和一个新的World。新的World里面啥也没有。还得加一些System。
 - <font color= Gold>Physics中Layer BelongsTo、Collide With在代码中是如何实现区分的。</font>
-- <font color= DarkGreen>DOTS如何Debug。出了Assertion。怎么打断断点？</font>
+- <font color= DarkGreen>DOTS如何Debug。除了Assertion。怎么打断点？</font>
+  - 在Mono的脚本中Debug。流程虽然麻烦一点。但断点还是打不了。
 
 ## 项目目标
 

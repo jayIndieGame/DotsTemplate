@@ -55,6 +55,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\System\UnitPathMoveSystem.cs" />
+    <Compile Include="Assets\02_DotsProjects\05_SubScene\Scripts\System\MoveSystem.cs" />
     <Compile Include="Assets\02_DotsProjects\02_PhysisMousePick\Scripts\System\MousePickBehaviour.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Component\PlayerComponent.cs" />
     <Compile Include="Assets\99_UtilClass\UtilsClass.cs" />
@@ -63,10 +64,13 @@
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Mono\PathPositionAuthoring.cs" />
     <Compile Include="Assets\02_DotsProjects\01_PhysisTestBasic\Scripts\Systems\TestTriggersSystem.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Mono\GridNode.cs" />
+    <Compile Include="Assets\02_DotsProjects\05_SubScene\Scripts\Mono\CameraHandler.cs" />
     <Compile Include="Assets\01_TraditionalProjects\03_PhysisRayCastBasic\Scripts\TraditionalRay.cs" />
+    <Compile Include="Assets\02_DotsProjects\05_SubScene\Scripts\Mono\SubSceneReference.cs" />
     <Compile Include="Assets\02_DotsProjects\03_PhysisRayCastDots\Scripts\Mono\CharacterMove.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\System\PathFinding.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\System\PathFollowSystem.cs" />
+    <Compile Include="Assets\02_DotsProjects\05_SubScene\Scripts\System\SubSceneLoader.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\System\LerpSystem.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Mono\Grid.cs" />
     <Compile Include="Assets\01_TraditionalProjects\02_MousePickTradition\Scripts\MousePickTradition.cs" />
@@ -75,6 +79,7 @@
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Component\PathPositions.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Mono\GameStart.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Mono\PathFindingVisual.cs" />
+    <Compile Include="Assets\02_DotsProjects\05_SubScene\Scripts\Component\PlayerComponent.cs" />
     <Compile Include="Assets\02_DotsProjects\04_AstarDots\Scripts\Component\PathFindingParams.cs" />
     <Compile Include="Assets\02_DotsProjects\03_PhysisRayCastDots\Scripts\System\CharacterMoveSystem.cs" />
     <Compile Include="Assets\02_DotsProjects\00_DotsBasicPerformanceTest\Scripts\Component\LerpComponent.cs" />
